@@ -8,7 +8,8 @@ def matrix_transpose(A):
     A=np.array(A)
     n,m=A.shape
     mat=np.zeros((m,n))
+    
     for i in range(n):
-        for j in range(m):
-            mat[j][i] = A[i][j]
+        mat[:, i] = A[i, :]
+        
     return mat
