@@ -16,7 +16,7 @@ def pad_sequences(seqs, pad_value=0, max_len=None):
 
     for i,seq in enumerate(seqs):
         length=min(len(seq),max_len)
-        arr[i][:length]=seq[:length]
+        arr[i,:length]=seq[:length]
         
     return arr
     
